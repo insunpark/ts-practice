@@ -1,10 +1,10 @@
-import { deprecated, ActionType, createReducer } from "typesafe-actions";
+import { deprecated, ActionType, createReducer } from 'typesafe-actions';
 const { createStandardAction } = deprecated;
 
 // 액션 생성함수를 선언합니다
-export const increase = createStandardAction("counter/INCREASE")();
-export const decrease = createStandardAction("counter/DECREASE")();
-export const increaseBy = createStandardAction("counter/INCREASE_BY")<number>(); // payload 타입을 Generics 로 설정해주세요.
+export const increase = createStandardAction('counter/INCREASE')();
+export const decrease = createStandardAction('counter/DECREASE')();
+export const increaseBy = createStandardAction('counter/INCREASE_BY')<number>(); // payload 타입을 Generics 로 설정해주세요.
 
 // 액션 객체 타입 준비
 const actions = { increase, decrease, increaseBy }; // 모든 액션 생성함수들을 actions 객체에 넣습니다
